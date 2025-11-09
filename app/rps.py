@@ -47,3 +47,28 @@ result = determine_winner(user_choice, computer_choice)
 print(result)
 
 # assert determine_winner("rock", "rock") == "TIE GAME"
+
+if __name__ == "__main__"
+
+    # ASK USER FOR AN INPUT (R/P/S)
+
+    user_choice = input("Please choose one of 'rock', 'paper', or 'scissors': ")
+    print("USER:", user_choice)
+
+    # VALIDATIONS
+
+    if user_choice not in VALID_OPTIONS:
+        print("OOPS INVALID INPUT, PLEASE TRY AGAIN")
+        # exit()
+        quit()
+
+    # GENERATE RANDOM COMPUTER CHOICE
+
+    computer_choice = random.choice(VALID_OPTIONS)
+    print("COMP:", computer_choice)
+
+    # DETERMINE THE WINNER
+
+    result = determine_winner(user_choice, computer_choice)
+    print(result)
+    
